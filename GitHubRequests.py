@@ -1,10 +1,9 @@
 import requests
 
 
-def get_repos(lang, size):
+def get_repos(lang, size) -> list:
     """
-    Function that receive a programming language to filter by and a number of repositories to return
-    and return the highest ranked repositories in this language
+    Function that returns the highest ranked repositories of the given language
     :param lang: repos language
     :param size: number of repositories to return
     :return: list of repos
@@ -14,9 +13,9 @@ def get_repos(lang, size):
     return [repo for repo in res]
 
 
-def print_repos(lang, size):
+def print_repos(lang, size) -> None:
     """
-     This function calls get_repos function and print the repos name with it stars number order by highest stars number
+    This function calls get_repos function and print the repos name with it stars number order by highest stars number
     :param lang: repositories language
     :param size: number of repos to print
     """
